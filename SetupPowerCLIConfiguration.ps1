@@ -1,3 +1,7 @@
+# SetupPowerCLIConfiguration -scope 'Session' -optionName 'ParticipateInCEIP' -optionValue $false
+# SetupPowerCLIConfiguration -scope 'Session' -optionName 'InvalidCertificateAction' -optionValue 'Ignore'
+# SetupPowerCLIConfiguration -scope 'Session' -optionName 'DefaultVIServerMode' -optionValue 'Single'
+    
 function SetupPowerCLIConfiguration {
     param (
         [string]$scope,
