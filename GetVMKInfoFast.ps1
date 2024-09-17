@@ -30,7 +30,7 @@ function GetVMKInfoFast
     else
     {
         $CustomObj = $null
-        $NicConfigObjArr = $esxHost.Config.VirtualNicManagerInfo.NetConfig | Where-Object {$_.NicType -eq $nicType} 
+        $NicConfigObj = $esxHost.Config.VirtualNicManagerInfo.NetConfig | Where-Object {$_.NicType -eq $nicType} 
         $seclectedInfo = $NicConfigObj.CandidateVnic | Where-Object {$NicConfigObj.SelectedVnic -contains $_.Key}  | Select-Object -ExpandProperty Spec
 
         if($null -ne $seclectedInfo)
